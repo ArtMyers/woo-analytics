@@ -1,0 +1,17 @@
+{
+  "name": "sq-wholesale-analytics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "WooCommerce plugin: retail vs wholesale (Tiered Price Table) sales analytics",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1"
+  }
+}

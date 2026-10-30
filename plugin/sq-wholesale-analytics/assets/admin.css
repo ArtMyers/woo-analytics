@@ -1,0 +1,112 @@
+.sqwa {
+	--sqwa-retail: #2271b1;
+	--sqwa-wholesale: #00a32a;
+	--sqwa-unknown: #a7aaad;
+	--sqwa-border: #dcdcde;
+	--sqwa-muted: #646970;
+}
+
+.sqwa .sqwa-bg--retail { background: var(--sqwa-retail); }
+.sqwa .sqwa-bg--wholesale { background: var(--sqwa-wholesale); }
+.sqwa .sqwa-bg--unknown { background: var(--sqwa-unknown); }
+.sqwa .sqwa-muted { color: var(--sqwa-muted); font-size: 12px; }
+
+/* Фільтри */
+.sqwa-filters {
+	background: #fff;
+	border: 1px solid var(--sqwa-border);
+	border-radius: 4px;
+	padding: 12px 16px;
+	margin: 16px 0;
+}
+.sqwa-filters__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+}
+.sqwa-filters__row label { display: inline-flex; align-items: center; gap: 6px; }
+.sqwa-statuses { margin-top: 10px; border: 0; padding: 0; }
+.sqwa-statuses legend { float: left; margin-right: 8px; color: var(--sqwa-muted); }
+
+/* Картки */
+.sqwa-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 12px;
+	margin: 16px 0 12px;
+}
+.sqwa-card {
+	background: #fff;
+	border: 1px solid var(--sqwa-border);
+	border-top: 4px solid var(--sqwa-muted);
+	border-radius: 4px;
+	padding: 14px 16px;
+}
+.sqwa-card--retail { border-top-color: var(--sqwa-retail); }
+.sqwa-card--wholesale { border-top-color: var(--sqwa-wholesale); }
+.sqwa-card--unknown { border-top-color: var(--sqwa-unknown); }
+.sqwa-card--share { border-top-color: #1d2327; }
+.sqwa-card__title { font-size: 13px; color: var(--sqwa-muted); text-transform: uppercase; letter-spacing: .03em; }
+.sqwa-card__value { font-size: 28px; font-weight: 600; line-height: 1.3; margin: 4px 0; font-variant-numeric: tabular-nums; }
+.sqwa-card__value small { font-size: 14px; font-weight: 400; color: var(--sqwa-muted); }
+.sqwa-card__meta { font-size: 13px; }
+
+/* Співвідношення */
+.sqwa-split {
+	display: flex;
+	height: 12px;
+	border-radius: 6px;
+	overflow: hidden;
+	background: #f0f0f1;
+	margin-bottom: 24px;
+}
+.sqwa-split__part { display: block; height: 100%; }
+
+/* Графік */
+.sqwa-legend { display: flex; gap: 16px; margin-bottom: 8px; font-size: 13px; }
+.sqwa-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.sqwa-chart {
+	display: flex;
+	align-items: stretch;
+	gap: 2px;
+	height: 160px;
+	background: #fff;
+	border: 1px solid var(--sqwa-border);
+	border-radius: 4px;
+	padding: 8px;
+}
+.sqwa-chart__col { flex: 1 1 0; min-width: 2px; display: flex; }
+.sqwa-chart__col:hover { background: #f6f7f7; }
+.sqwa-chart__stack { display: flex; flex-direction: column; justify-content: flex-end; width: 100%; }
+.sqwa-chart__stack span { display: block; width: 100%; }
+.sqwa-chart__stack span:first-child { border-radius: 2px 2px 0 0; }
+.sqwa-chart__axis {
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	color: var(--sqwa-muted);
+	margin: 4px 2px 24px;
+}
+
+/* Таблиця */
+.sqwa-table th.num,
+.sqwa-table td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.sqwa-table th a { color: inherit; text-decoration: none; }
+.sqwa-table th a:hover { color: var(--sqwa-retail); }
+.sqwa-table tfoot th { font-weight: 600; }
+.sqwa-tag {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 10px;
+	background: #edfaef;
+	color: #007017;
+	font-size: 12px;
+	white-space: nowrap;
+}
+.sqwa-empty { background: #fff; border: 1px solid var(--sqwa-border); padding: 16px; }
+.sqwa-note { color: var(--sqwa-muted); max-width: 900px; margin-top: 16px; }
+
+@media (max-width: 782px) {
+	.sqwa-table { display: block; overflow-x: auto; }
+}
